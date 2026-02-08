@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color:  #25343F;
+
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    margin: 40px;
+    justify-content: space-between;
+    background-color:#EAEFEF;
+    padding: 20px;
+    border-radius: 8px;
+}
+.nav-button{
+    border-radius: 8px;
+    width: 126px;
+    height: 48px;
+    padding: 10px;
+    background-color: #FF9B51;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+section{
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    flex-grow: 1;
+    gap: 30px;
+}
+section .task-column{
+    background-color: #BFC9D1;
+    flex-grow: 1;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+section .task-column.hover-over{
+    border: 2px dashed white;
+    transform: scale(1.05);
+}
+section .task-column .heading{
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .task-column .task{
+    background-color: #EAEFEF;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: grab;
+    
+}
+section .task-column .task button{
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #FF9B51 ;
+}
+.modal{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left:0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active{
+    display: flex;
+}
+.modal .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(29, 29, 29,0.404);
+}
+.modal .center{
+    background-color: rgba(66, 66, 66, 0.404);
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+
+}
+.modal .center input, .modal .center textarea, .modal .center select{
+    background-color: #25343F;
+    border: none;
+    outline: none;
+    color: #EAEFEF;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.modal .center button{
+    background-color: #FF9B51;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+}
